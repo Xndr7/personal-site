@@ -147,7 +147,7 @@ configure :build do
   activate :asset_hash
   activate :cache_buster
   #activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
-  set :google_analytics_account, 'UA-38941693-2'
+  set :google_analytics_account, ''
 
   # Automatic image dimensions on image_tag helper
   activate :automatic_image_sizes
