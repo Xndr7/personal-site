@@ -1,0 +1,32 @@
+---
+title: About me
+layout: pages
+---
+
+h3 About Me
+div itemscope="" itemtype="http://schema.org/Person"
+  p
+    = "Hi! I'm "
+    strong itemprop="name" ="Sanjiv Lobo" 
+    span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"
+      = " and I'm from "
+      = succeed "," do
+        span itemprop="addressLocality"
+          = "Mumbai"
+      span itemprop="addressRegion"
+      = "India. "
+      = "I'm"
+      span itemprop="jobTitle"
+        = ' an undergraduate Electronics Student '
+      = '@FRCRCE, Mumbai '
+      = " and have a strong passion in Artificial Intelligence and Machine Learning, in particular, sentiment analysis and data visualization."
+      
+  p
+    = "I have made few projects in these fields and they can be seen on my "
+    = link_to "Github profile. ", "https://www.github.com/xndr7"
+    
+  p
+    = 'To contact me for any help, please feel free to ping me at '
+    em itemprop="email"
+      = link_to "sldesalobo@gmail.com", "mailto:sldesalobo@gmail.com"
+    = ' or message me on any of the social networks linked down below.'
