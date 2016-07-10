@@ -5,7 +5,7 @@
 # Time.zone = "IST"
 Time.zone = "Chennai"
 
-set :site_url, 'https://sanjiv.me'
+set :site_url, 'https://xndr7.github.io/personal-site'
 set :site_title, 'Sanjiv Lobo | Student@FRCRCE'
 set :site_author, 'Sanjiv Lobo'
 set :site_description, 'Student@FRCRCE'
@@ -52,10 +52,10 @@ activate :i18n do |l|
   l.no_fallbacks = true
 end
 
-page "/feed.xml", layout: false
-page "/sitemap.xml", layout: false
-page "/blog.html", layout: "blog"
-page "/posts/*.html", layout: "posts"
+page "personal-site/feed.xml", layout: false
+page "personal-site/sitemap.xml", layout: false
+page "personal-site/blog.html", layout: "blog"
+page "personal-site/posts/*.html", layout: "posts"
 
 # Title
 activate :title, site: 'Sanjiv Lobo | Student@FRCRCE', separator: ' — '
@@ -64,7 +64,7 @@ activate :title, site: 'Sanjiv Lobo | Student@FRCRCE', separator: ' — '
 activate :meta_tags
 
 # Sitemap
-set :url_root, 'https://sanjiv.me/'
+set :url_root, 'https://xndr7.github.io/personal-site'
 activate :search_engine_sitemap, default_priority: 0.5,
                                  default_change_frequency: "always"
 
@@ -130,6 +130,12 @@ require 'sass-media_query_combiner'
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.ignore   = ['source/assets/stylesheets/vendors/']
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'gh-pages'
+  deploy.build_before = true
 end
 
 # Build-specific configuration
