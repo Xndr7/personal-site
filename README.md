@@ -5,7 +5,7 @@ My personal website and blog
 
 
 
-warning: This repository is constantly updated!
+warning: This repository is rarely updated!
 
 ---
 
